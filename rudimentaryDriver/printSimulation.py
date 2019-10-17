@@ -7,17 +7,16 @@ def simulatePrint(path):
     """
     img = Image.open(path)
     img.load()
-    print("here")
     
     dataR = np.asarray(img, dtype="int32")
     dataRG = np.asarray(img, dtype="int32")
     dataRGB = np.asarray(img, dtype="int32") #contains all RGB values
-    print("here2")
+    
     for c in range(len(dataR)):
         for r in range(len(dataR[c])):
             dataR[c][r] = [dataR[c][r][0],0,0] #keep R, zero out G and B
             dataRG[c][r] = [dataRG[c][r][0],dataRG[c][r][1],0] #keep R and G, zero out B
-    print("here3")         
+    
     pathSplit = path.split(".")  
     name = ".".join(pathSplit[:-1])
     ext = "."+pathSplit[-1]
