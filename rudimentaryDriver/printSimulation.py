@@ -23,7 +23,7 @@ def simulatePrint(path):
                   
     imgR = Image.fromarray(np.asarray( np.clip(dataR,0,255), dtype="uint8"))
     imgR.show()
-    img.save(name+"R"+ext)
+    imgR.save(name+"R"+ext)
     imgRG = Image.fromarray(np.asarray( np.clip(dataRG,0,255), dtype="uint8"))
     imgRG.show()
     imgRG.save(name+"RG"+ext)
@@ -32,4 +32,4 @@ def simulatePrint(path):
     imgRGB.save(name+"RGB"+ext)
 #simulatePrint(".\images\me.jpg")
 #simulatePrint(".\images\me2.jpg")
-simulatePrint(".\images\shoes.jpg")
+simulatePrint(".\images\img.jpg")
